@@ -1,0 +1,11 @@
+<!--maquetacion de los detalles de cada personaje-->
+
+<div class="row" *ngIf="character$ | async as character">
+  <!--aqui nos suscribimos a este observable cuando este listo,
+  y cuendo este listo marcara para chequear y verse en nuestro componente-->
+  <div class="col-xs-12 col-sm-3 col md-6 justify-content-center">
+    <!--aqui se reutiliza codigo en angular para que quede mas limpio-->
+    <app-character [character]="character"></app-character>
+  </div>
+</div>
+<button (click)="onBack()" class="btn btn-success btn-lg mt-3">Atras</button>
